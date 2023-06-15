@@ -58,17 +58,13 @@ body{
     width: 60%;
     margin: 0 auto;
 }
-.main__products-products{
+.slides1,.slides2{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .main__products-card{
-    padding: 0.3em;
-}
-.product__card-img{
-    height: 100%;
-    width: 100%;
+    padding: 0.3em; 
 }
 .footer{
     display: flex;
@@ -109,3 +105,16 @@ body{
     font-size: large;
     font-style: italic;
 }
+.btnNext{
+    background-color: var(--purple);
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 5px; 
+    height: 45px;
+    align-self: center;
+}
+.none{
+    display: none;
+}
+
