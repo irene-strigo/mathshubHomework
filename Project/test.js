@@ -58,8 +58,8 @@ let commentWords = ["Фу какая гадость", "это уже банал�
 let defaultWords = ["Ну хорошо!", "не может быть", "допустим", "это на вашей совести!", "Оригинально", "Пусть будет так"]
 beginning.textContent = beginningWords[0]
 let counter = 0
-
 btn.addEventListener("click", function () {
+    let rand = Math.floor(Math.random() * defaultWords.length);
     if (counter < beginningWords.length) {
         if (addText.value === answerWords[0]) {
             story.innerHTML += `<br>${beginningWords[counter]}<br>${addText.value}? ${commentWords[0]} `
@@ -86,7 +86,7 @@ btn.addEventListener("click", function () {
             story.innerHTML += `<br>${beginningWords[counter]}<br>${addText.value}? ${commentWords[5]}`
         }
         if (addText.value != answerWords[counter] && addText.value.toLowerCase() != (alternativeAnswers[counter] || alternativeAnswers[counter + 1]) || "") {
-            story.innerHTML += `<br>${beginningWords[counter]}<br>${addText.value} ... ${defaultWords[counter]}`
+            story.innerHTML += `<br>${beginningWords[counter]}<br>${addText.value} ... ${defaultWords[rand]}`
         }
     }
 })
